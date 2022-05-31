@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Book 分页工具</title>
+    <meta name="description" content="Minecraft 书籍制作工具 | Minecraft Book Generator | Minecraft Book Page Splitting Tool | 一个轻量级的 Minecraft 书本分页工具，可以将纯文本分成数个 Minecraft 中书的页面，方便玩家将文本粘贴至游戏中。">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet"> </head>
+<body>
+    <div class="container">
+        <header class="mc-header">
+            <h1>Minecraft Book 分页工具</h1>
+        </header>
+        <main class="mc-main">
+            <div class="mc-input">
+                <textarea name="input-textarea" id="input-textarea" autofocus="autofocus"></textarea>
+            </div>
+            <div class="mc-control">
+                <div class="mc-c1">
+                    <a id="mc-c1-button" href="javascript:void(0);" onclick="mcConsole()">控制台↑</a>
+                </div>
+                <div class="mc-c2">
+                    <button onclick="mcGenerate()" id="mc-generate" class="mc-button">生成</button>
+                </div>
+            </div>
+            <div class="mc-output folded" id="mc-output">
+                <h2 class="mc-title2">输出</h2>
+                <textarea name="output-textarea" id="output-textarea">当你点击「生成」按钮后，输出的分页文本会在这里显示。</textarea>
+            </div>
+        </main>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
