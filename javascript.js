@@ -50,7 +50,9 @@ function mcGenerate() {
         }
         if (inputText[index] == "\n") {
             // 判断字符是否为换行符
-            outputText[page] += "\n";
+            if (currLine != 13) {
+                outputText[page] += "\n";
+            }
             index++;
         } else if (inputText.charCodeAt(index) > 255) {
             // 判断字符是否为中文
