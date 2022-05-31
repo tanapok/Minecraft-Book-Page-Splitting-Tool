@@ -39,6 +39,10 @@ function mcGenerate() {
     let inputText = inputTextarea.value;
     let outputText = [];
     let outString = "";
+    if (inputText == "") {
+        outputTextarea.value = "你还什么都没输入呢。"
+        buttonEnable();
+    }
     while (index < inputText.length) {
         if (currLine == 0 && currChar == 0) {
             page++;
@@ -96,4 +100,20 @@ function buttonDisable() {
 function buttonEnable() {
     mcGenerateButton.innerText = "生成";
     mcGenerateButton.removeAttribute("disabled");
+}
+
+function mcDelSpace() {
+    let inputText = "";
+    inputText = inputTextarea.value;
+    let newInputText = "";
+    let prev = "\n";
+    let i = 0;
+    while (i < inputText.length) {
+        if (!(prev == "\n" && inputText[i] == "\n")) {
+            prev = inputText[i];
+            newInputText += inputText[i];
+        }
+        i++;
+    }
+    inputTextarea.value = newInputText;
 }

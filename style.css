@@ -132,6 +132,11 @@ h1 {
     width: 6rem;
 }
 
+.mc-button-2 {
+    font-size: 1rem;
+    width: 10rem;
+}
+
 .folded {
     display: none;
 }
